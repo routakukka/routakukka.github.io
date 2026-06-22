@@ -1,1 +1,411 @@
 # routakukka.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Routakukka — Illustrator</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bg:#0c0c0d;
+    --text:#e8e2d8;
+    --muted:#9d968b;
+    --line:#262626;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter, sans-serif;
+    line-height:1.6;
+}
+
+
+header {
+
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    z-index:10;
+    background:linear-gradient(
+    rgba(12,12,13,.9),
+    transparent);
+
+}
+
+.logo {
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:32px;
+    letter-spacing:4px;
+
+}
+
+
+nav a {
+
+    color:var(--text);
+    text-decoration:none;
+    margin-left:30px;
+    font-size:14px;
+
+}
+
+
+
+.hero {
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    radial-gradient(
+    circle at center,
+    rgba(150,130,90,.15),
+    transparent 40%);
+
+}
+
+
+
+.hero h1 {
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(55px,9vw,110px);
+    font-weight:300;
+    margin:0;
+
+}
+
+
+.hero p {
+
+    color:var(--muted);
+    max-width:500px;
+    margin:30px auto;
+
+}
+
+
+
+.button {
+
+    display:inline-block;
+    border:1px solid var(--line);
+    padding:12px 35px;
+    color:var(--text);
+    text-decoration:none;
+
+}
+
+
+
+
+section {
+
+    padding:100px 8%;
+
+}
+
+
+.title {
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:50px;
+    font-weight:300;
+
+}
+
+
+/* PORTFOLIO */
+
+.grid {
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+
+.card {
+
+    aspect-ratio:1/1.2;
+    overflow:hidden;
+    background:#151515;
+
+}
+
+
+.card img {
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:
+    grayscale(20%);
+    transition:.5s;
+
+}
+
+
+.card:hover img {
+
+    transform:scale(1.05);
+}
+
+
+
+/* ABOUT */
+
+.about {
+
+    max-width:700px;
+    color:#c5beb3;
+
+}
+
+
+
+/* CONTACT */
+
+.contact {
+
+    border-top:1px solid var(--line);
+
+}
+
+
+.email {
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:35px;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    padding:40px 8%;
+    color:var(--muted);
+    font-size:13px;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+header {
+
+padding:20px;
+
+}
+
+nav {
+
+display:none;
+
+}
+
+section {
+
+padding:70px 5%;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+ROUTAKUKKA
+</div>
+
+
+<nav>
+
+<a href="#work">Work</a>
+<a href="sketchbook.html">Sketchbook</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+<h1>
+Illustrations<br>
+from quiet worlds
+</h1>
+
+
+<p>
+Fantasy, nature and storytelling illustrations
+created with detail, emotion and atmosphere.
+</p>
+
+
+<a class="button" href="#work">
+View portfolio
+</a>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="work">
+
+
+<h2 class="title">
+Selected Works
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+<img src="images/art1.jpg">
+</div>
+
+
+<div class="card">
+<img src="images/art2.jpg">
+</div>
+
+
+<div class="card">
+<img src="images/art3.jpg">
+</div>
+
+
+<div class="card">
+<img src="images/art4.jpg">
+</div>
+
+
+<div class="card">
+<img src="images/art5.jpg">
+</div>
+
+
+<div class="card">
+<img src="images/art6.jpg">
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="about">
+
+
+<h2 class="title">
+About
+</h2>
+
+
+<p class="about">
+
+I am Routakukka, an illustrator creating
+story-driven artwork inspired by nature,
+animals and imagined worlds.
+
+My work focuses on atmosphere,
+character and small details that invite
+the viewer to stay a little longer.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section id="contact" class="contact">
+
+
+<h2 class="title">
+Contact
+</h2>
+
+
+<p>
+For commissions, publishing and collaborations:
+</p>
+
+
+<p class="email">
+hello@routakukka.art
+</p>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+© Routakukka
+
+</footer>
+
+
+</body>
+</html>
