@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Routakukka</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300&display=swap');
+
+:root{
+    --bg:#0b0b0c;
+    --text:#e7e1d8;
+    --muted:#9f988d;
+    --line:#242424;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:700px;
+}
+
+.logo{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(3rem,8vw,6rem);
+    letter-spacing:.2em;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.divider{
+    width:80px;
+    height:1px;
+    background:var(--line);
+    margin:30px auto;
+}
+
+.subtitle{
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.contact{
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+    padding-bottom:3px;
+}
+
+.footer{
+    margin-top:60px;
+    color:var(--muted);
+    font-size:.85rem;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        ROUTAKUKKA
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="subtitle">
+        A new portfolio is currently taking shape.<br>
+        The website will return soon with selected works,
+        sketches, and illustration projects.
+    </p>
+
+    <p>
+        Contact:
+        <a class="contact" href="mailto:hello@routakukka.art">
+            hello@routakukka.art
+        </a>
+    </p>
+
+    <div class="footer">
+        © Routakukka
+    </div>
+
+</div>
+
+</body>
+</html>
