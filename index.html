@@ -3,111 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Routakukka — Fantasy & Animal Illustrator</title>
-
-<link rel="icon" type="image/png" href="routakukka.github.io/ROUTAfavicon.png">
-
+<link rel="icon" href="favicon.ico">
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300&display=swap');
-
-:root{
-    --bg:#0b0b0c;
-    --text:#e7e1d8;
-    --muted:#9f988d;
-    --line:#242424;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
+:root{--bg:#0c0c0d;--panel:#111112;--text:#ece7de;--muted:#a7a095;--line:#2a2a2a;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif}
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+.sidebar{position:fixed;left:0;top:0;width:320px;height:100vh;background:var(--panel);padding:56px 42px;display:flex;flex-direction:column;z-index:5}
+.logo{font:300 2.2rem "Cormorant Garamond",serif;letter-spacing:.22em;margin-bottom:70px}
+.tag{font:300 2.6rem "Cormorant Garamond",serif;line-height:1.05;margin-bottom:24px}
+.intro{color:var(--muted);line-height:1.8;margin-bottom:38px}
+.button{display:inline-block;border:1px solid var(--line);padding:12px 30px;color:var(--text);text-decoration:none;transition:.3s;margin-bottom:60px}
+.button:hover{background:#eee;color:#111}
+nav{display:flex;flex-direction:column;gap:18px}
+nav a{text-decoration:none;color:var(--text);transition:.3s}
+nav a:hover{opacity:.55;padding-left:6px}
+.copy{margin-top:auto;color:var(--muted);font-size:.85rem}
+.right{margin-left:320px}
+.hero{position:relative;height:100vh;overflow:hidden}
+.hero:before{content:"";position:absolute;left:0;top:0;width:28%;height:100%;background:linear-gradient(to right,#0c0c0d 0%,rgba(12,12,13,.88) 35%,rgba(12,12,13,0) 100%);z-index:2}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 2.2s ease}
+.slide.active{opacity:1}
+.content{padding:90px 8%}
+h2{font:300 3rem "Cormorant Garamond",serif;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.card{aspect-ratio:1/1.2;overflow:hidden;background:#181818}
+.card img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover img{transform:scale(1.04)}
+section{padding-bottom:110px}
+.about{max-width:720px;color:var(--muted);line-height:1.9}
+.contact{border-top:1px solid var(--line);padding-top:80px}
+.email{font:300 2.1rem "Cormorant Garamond",serif;margin-top:20px}
+@media(max-width:900px){
+.layout{display:block}
+.sidebar{position:relative;width:100%;height:auto}
+.right{margin-left:0}
+.hero{height:60vh}
+.hero:before{width:100%;background:linear-gradient(to top,#0c0c0d,rgba(12,12,13,.2))}
 }
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Inter,sans-serif;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-}
-
-.container {
-    max-width:700px;
-    width:100%;
-    text-align:center;
-}
-
-.logo {
-    width:100%;
-    font-family:"Cormorant Garamond", serif;
-    font-size:clamp(3rem,8vw,6rem);
-    letter-spacing:.12em;
-    font-weight:300;
-    text-align:center;
-}
-
-.divider{
-    width:80px;
-    height:1px;
-    background:var(--line);
-    margin:30px auto;
-}
-
-.subtitle{
-    color:var(--muted);
-    font-size:1rem;
-    line-height:1.8;
-    margin-bottom:40px;
-}
-
-.contact{
-    color:var(--text);
-    text-decoration:none;
-    border-bottom:1px solid var(--line);
-    padding-bottom:3px;
-}
-
-.footer{
-    margin-top:60px;
-    color:var(--muted);
-    font-size:.85rem;
-}
-
 </style>
 </head>
 <body>
-
-<div class="container">
-
-    <div class="logo">
-        ROUTAKUKKA
-    </div>
-
-    <div class="divider"></div>
-
-    <p class="subtitle">
-        I'm in the process of shaping the new portfolio.<br>
-        The website will return soon with selected works,
-        sketches, and illustration projects.
-    </p>
-
-    <p>
-        Contact:
-        <a class="contact" href="mailto:hello@routakukka.art">
-            hello@routakukka.art
-        </a>
-    </p>
-
-    <div class="footer">
-        © Routakukka 2026
-    </div>
-
+<div class="layout">
+<aside class="sidebar">
+<div class="logo">ROUTAKUKKA</div>
+<div class="tag">Fantasy<br>Illustrator</div>
+<p class="intro">Illustrations inspired by folklore, animals, spirituality and imagined worlds.</p>
+<a class="button" href="#work">View Portfolio</a>
+<nav>
+<a href="#work">Work</a>
+<a href="sketchbook.html">Sketchbook</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="copy">© Routakukka</div>
+</aside>
+<main class="right">
+<section class="hero">
+<img class="slide active" src="images/hero1.jpg" alt="">
+<img class="slide" src="images/hero2.jpg" alt="">
+<img class="slide" src="images/hero3.jpg" alt="">
+<img class="slide" src="images/hero4.jpg" alt="">
+<img class="slide" src="images/hero5.jpg" alt="">
+</section>
+<div class="content">
+<section id="work">
+<h2>Selected Works</h2>
+<div class="grid">
+<div class="card"><img src="images/art1.jpg"></div>
+<div class="card"><img src="images/art2.jpg"></div>
+<div class="card"><img src="images/art3.jpg"></div>
+<div class="card"><img src="images/art4.jpg"></div>
+<div class="card"><img src="images/art5.jpg"></div>
+<div class="card"><img src="images/art6.jpg"></div>
+<div class="card"><img src="images/art7.jpg"></div>
 </div>
-
+</section>
+<section id="about">
+<h2>About</h2>
+<p class="about">Routakukka is the portfolio of Finnish illustrator Kia Turunen. Her work draws from folklore, heraldry, mythology and the natural world, creating quiet, decorative illustrations that invite viewers to linger. Available for publishing, licensing and selected commissions.</p>
+</section>
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<p>For commissions, publishing and collaborations:</p>
+<p class="email">hello@routakukka.art</p>
+</section>
+</div>
+</main>
+</div>
+<script>
+const slides=document.querySelectorAll('.slide');
+let i=0;
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},8000);
+</script>
 </body>
 </html>
